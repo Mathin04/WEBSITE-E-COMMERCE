@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MA Fashions</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff9f5;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: left;
+      color: #b87333;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .shop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    .btn {
+      background-color: #b87333;
+      color: white;
+      border: none;
+      padding: 8px;
+      margin-top: 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<h1>MA Fashions</h1>
+
+<!-- 🔍 Search Bar -->
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchItems()">
+</div>
+
+<!-- 🛍️ Products -->
+<div class="shop" id="shopItems">
+  <div class="item">
+    <img src="m3.jpg">
+    <h3>FootWear</h3>
+    <a href="footwear.html" class="btn">Explore</a>
+  </div>
+
+  <div class="item">
+    <img src="m4.jpg">
+    <h3>Jewellary</h3>
+    <a href="jewellary.html" class="btn">Explore</a>
+  </div>
+
+  <!-- ✅ Clothing button links to Shop 2 -->
+  <div class="item">
+    <img src="m2.jpg">
+    <h3>Clothing</h3>
+    <a href="clothing.html" class="btn">Explore</a>
+  </div>
+
+  <div class="item">
+    <img src="m5.jpg">
+    <h3>Hair Accessories</h3>
+     <a href="hair accessories.html" class="btn">Explore</a>
+  </div>
+
+  <div class="item">
+    <img src="m6.jpg">
+    <h3>Bags</h3>
+    <a href="bags.html" class="btn">Explore</a>
+  </div>
+
+  <div class="item">
+    <img src="m7.jpg">
+    <h3>Accessories</h3>
+    <a href="accesories.html" class="btn">Explore</a>
+  </div>
+
+  <div class="item">
+    <img src="m8.jpg">
+    <h3>Makeup</h3>
+  <a href="makeup.html" class="btn">Explore</a>
+  </div>
+</div>
+
+<!-- 🔍 Search Function -->
+<script>
+  function searchItems() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const items = document.querySelectorAll('.shop .item');
+    
+    items.forEach(item => {
+      const text = item.querySelector('h3').textContent.toLowerCase();
+      item.style.display = text.includes(input) ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

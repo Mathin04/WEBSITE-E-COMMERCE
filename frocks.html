@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Boutique Shop</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #fefefe; margin: 0; padding: 0; }
+  header { background: #f4bfbf; padding: 20px; text-align: center; color: #fff; }
+  .products { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+  .product { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 10px; width: 220px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  .product img { max-width: 100%; border-radius: 10px; }
+  .product h3 { margin: 5px 0 5px; }
+  .product p { color: #555; margin: 5px 0; }
+  .price { font-weight: bold; color: #888; }
+  .original-price { text-decoration: line-through; color: #888; font-size: 0.9em; margin-right: 5px; }
+  .discounted-price { font-weight: bold; color: #888; font-size: 1em; }
+  .offer { background: #e53935; color: #fff; padding: 2px 6px; border-radius: 3px; font-size: 0.8em; margin-left: 5px; }
+  .rating { color: #fbc02d; margin: 5px 0; }
+  .free-delivery { color: #4caf50; font-size: 0.7em; }
+  .btn { display: inline-block; margin: 5px 3px; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .buy-btn { background: #e89a9a; color: #fff; }
+  .buy-btn:hover { background: #d47c7c; }
+  .cart-btn { background: #ffb74d; color: #fff; }
+  .cart-btn:hover { background: #ffa726; }
+</style>
+</head>
+<body>
+
+<header>
+  <h>MA Fashions</h></h1>
+</header>
+
+<section class="products">
+  <div class="product">
+    <img src="fr1.jpg">
+    <div class="rating">★★★★★</div>
+    <p class="price">
+    <span class="original-price">&#8377; 12500</span>
+    <span class="discounted-price">&#8377; 9500</span>
+    <span class="offer">30% OFF</span>
+  </p>
+    <p class="free-delivery">Free Delivery</p>
+    <button class="btn buy-btn">Buy Now</button>
+    <button class="btn cart-btn">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="fr2.jpg">
+    <div class="rating">★★★★☆</div>
+    <p class="price">
+    <span class="original-price">&#8377;22700</span>
+    <span class="discounted-price">&#8377; 15500</span>
+    <span class="offer">40% OFF</span>
+  </p>
+    <p class="free-delivery">Free Delivery</p>
+    <button class="btn buy-btn">Buy Now</button>
+    <button class="btn cart-btn">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="fr3.jpg">
+    <div class="rating">★★★★★</div>
+    <p class="price">
+    <span class="original-price">&#8377; 13400</span>
+    <span class="discounted-price">&#8377; 7500</span>
+    <span class="offer">20% OFF</span>
+  </p>
+    <p class="free-delivery">Free Delivery</p>
+    <button class="btn buy-btn">Buy Now</button>
+    <button class="btn cart-btn">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="fr4.jpg">
+    <div class="rating">★★★★★</div>
+    <p class="price">
+    <span class="original-price">&#8377; 24000</span>
+    <span class="discounted-price">&#8377; 18000</span>
+    <span class="offer">40% OFF</span>
+  </p>
+    <p class="free-delivery">Free Delivery</p>
+    <button class="btn buy-btn">Buy Now</button>
+    <button class="btn cart-btn">Add to Cart</button>
+  </div>
+</section>
+
+</body>
+</html>

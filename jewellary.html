@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff9f6;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #ffe6e6;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #b30059;
+    }
+    .shop-container {
+      padding: 40px;
+    }
+    .shop-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #b30059;
+      font-size: 2.5rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+    .product-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-info h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .product-info p {
+      margin: 8px 0;
+      color: #666;
+    }
+    .product-info button {
+      background-color: #b30059;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .product-info button:hover {
+      background-color: #800040;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">MA Fashions
+
+    </div>
+  </nav>
+
+  <div class="shop-container">
+    <h1 class="shop-title">Shop Our Collection</h1>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+
+  <script>
+    const products = [
+      {
+        name: "Earrings",
+        image: "j1.jpg",
+        url: "ear.html"
+      },
+      {
+        name: "Chokar",
+        image: "j2.jpg",
+        url: "chokar.html"
+      },
+      {
+        name: "Bangles",
+        image: "j3.jpg",
+        url: "bangles.html"
+      },
+      {
+        name: "Rings",
+        image: "j4.jpg",
+        url: "rings.html"
+      },
+      {
+        name: "Hip Belt",
+        image: "j5.jpg"
+      },
+      {
+        name: "Arm Cuff",
+        image: "j6.jpg"
+      },
+      {
+        name: "Neckleces",
+        image: "j7.jpg",
+        url: "neckleces.html"
+
+      },
+      {
+        name: "Brooches",
+        image: "j8.jpg" 
+      },
+      {
+        name: "Mangalsutra",
+        image: "j9.jpg",
+        url: "mangalsutra.html"
+      },
+      {
+       name: "Nosepin",
+        image: "j10.jpg" 
+      },
+      {
+       name: "Anklets",
+        image: "j11.jpg" 
+      },
+      {
+        name: "Ear Chains",
+        image: "j12.jpg"
+      }
+    ];
+
+    const grid = document.getElementById('productGrid');
+
+    products.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-info">
+          <h3>${product.name}</h3>
+          <button onclick="window.location.href='${product.url}'">MORE</button>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

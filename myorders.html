@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Orders - MA Fashions</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff9f5;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #b87333;
+      text-align: center;
+    }
+
+    .orders {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .order {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+
+    .order img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .details {
+      flex-grow: 1;
+    }
+
+    .details h3 {
+      margin: 0 0 10px;
+    }
+
+    .status {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #b87333;
+      color: white;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<h1>My Orders</h1>
+
+<div class="orders">
+
+  <div class="order">
+    <img src="m2.jpg" alt="Clothing">
+    <div class="details">
+      <h3>Clothing</h3>
+      <p>Order Date: 01-June-2025</p>
+      <p>Quantity: 2</p>
+      <span class="status">Delivered</span>
+    </div>
+  </div>
+
+  <div class="order">
+    <img src="m6.jpg" alt="Bag">
+    <div class="details">
+      <h3>Bag</h3>
+      <p>Order Date: 28-May-2025</p>
+      <p>Quantity: 1</p>
+      <span class="status">Shipped</span>
+    </div>
+  </div>
+
+  <div class="order">
+    <img src="m4.jpg" alt="Jewellary">
+    <div class="details">
+      <h3>Jewellary</h3>
+      <p>Order Date: 25-May-2025</p>
+      <p>Quantity: 1</p>
+      <span class="status">Processing</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cart - MA Fashions</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fffaf5; padding: 20px; }
+    h1 { color: #b87333; }
+    .cart-item { display: flex; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+    .cart-item img { width: 100px; height: 100px; object-fit: cover; border-radius: 8px; margin-right: 20px; }
+    .cart-item h3 { margin: 0 0 5px; }
+    .cart-item p { margin: 0; color: #444; }
+    .empty { color: #888; }
+  </style>
+</head>
+<body>
+
+<h1>🛒 My Cart</h1>
+<div id="cartContainer"></div>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const container = document.getElementById("cartContainer");
+
+  if (cart.length === 0) {
+    container.innerHTML = "<p class='empty'>Your cart is empty.</p>";
+  } else {
+    cart.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div>
+          <h3>${item.name}</h3>
+          <p>Price: ₹${item.price}</p>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact - MA Fashions</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff9f5;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #b87333;
+    }
+
+    .contact-container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+
+    button {
+      background-color: #b87333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .info {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Contact Us</h1>
+
+<div class="contact-container">
+  <form id="contactForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="4" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<div class="info">
+  <h2>Our Info</h2>
+  <p><strong>Email:</strong> contact@mafashions.com</p>
+  <p><strong>Phone:</strong> +91-9876543210</p>
+  <p><strong>Address:</strong> MA Fashions, MG Road, Hyderabad, India</p>
+</div>
+
+<!-- ✅ JavaScript for popup -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent real form submission
+    alert("Your message has been sent successfully!");
+    // Optionally clear the form
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
